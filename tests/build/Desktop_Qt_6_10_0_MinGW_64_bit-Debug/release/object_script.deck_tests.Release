@@ -1,0 +1,10 @@
+release/deck_gtest.o
+release/deck_gmock.o
+release/deck.o
+release/flashcard.o
+release/flashcardmanager.o
+release/gtest-all.o
+release/gmock-all.o
+release/flashcardmanager_gmock.o
+release/flashcardmanager_gtest.o
+release/main.o

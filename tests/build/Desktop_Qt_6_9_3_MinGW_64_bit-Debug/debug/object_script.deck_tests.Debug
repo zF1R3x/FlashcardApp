@@ -1,0 +1,10 @@
+debug/deck_gtest.o
+debug/deck_gmock.o
+debug/deck.o
+debug/flashcard.o
+debug/flashcardmanager.o
+debug/gtest-all.o
+debug/gmock-all.o
+debug/flashcardmanager_gmock.o
+debug/flashcardmanager_gtest.o
+debug/main.o

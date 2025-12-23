@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.16)
+project(FlashcardsTests LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Qt6 REQUIRED COMPONENTS Core)
+
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+add_executable(deck_tests
+  deck_gtest.cpp
+  deck_gmock.cpp
+  ../deck.cpp
+  ../flashcard.cpp
+)
+
+set_target_properties(deck_tests PROPERTIES WIN32_EXECUTABLE FALSE)
+
+target_include_directories(deck_tests PRIVATE ..)
+
+target_link_libraries(deck_tests
+  Qt6::Core
+  GTest::gtest
+  GTest::gmock
+)
+
+include(GoogleTest)
+gtest_discover_tests(deck_tests)
