@@ -1,8 +1,6 @@
-## Repository Structure
-
-- `code/` – C++ source code and tests
-- `report/` – Project report, UML diagrams, and any design files
-- `README.md` – This file
+# CS3307 Project Flashcard Application
+## Description
+Refer to the /report folder for further details
 
 ## Build & Test Instructions
 
